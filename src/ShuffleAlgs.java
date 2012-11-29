@@ -2,16 +2,16 @@ import java.util.HashSet;
 import java.util.Random;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Eric
+ * Eric
  * Date: 28/11/12
  * Time: 1:01 PM
- * To change this template use File | Settings | File Templates.
  */
 public class ShuffleAlgs {
     /**
      * Shuffle algorithm as suggested by Mike Li and Andrew Tan
+     * Shuffles the input list, the output list, and returns the mapping between the two
      * @param names the number of names
+     * @param seed the seed for the PRNG
      * @return a list of indices for
      * which the ith person is the
      * giver of the person at position i
@@ -77,6 +77,14 @@ public class ShuffleAlgs {
         return result;
     }
 
+    /**
+     * Shuffle algorithm as suggested by Andrew
+     * Pick pairs in (giver, reciever) format.
+     * Keep going until valid.
+     * @param names number of names
+     * @param seed seed for the PRNG
+     * @return recievers for each giver
+     */
     public static int[] tanShuffle(int names, long seed) {
         Random r = new Random(seed);
 

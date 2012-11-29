@@ -1,10 +1,8 @@
 
 /**
- * Created with IntelliJ IDEA.
- * User: Eric
+ * Eric
  * Date: 28/11/12
  * Time: 5:28 AM
- * To change this template use File | Settings | File Templates.
  */
 public class Shuffler {
     public static String[] names = {
