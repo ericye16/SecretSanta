@@ -1,3 +1,4 @@
+import java.io.IOException;
 
 /**
  * Eric
@@ -14,8 +15,14 @@ public class Shuffler {
             "Frieda"
     };
     public static void main(String[] args) {
-        long seed = 0; // Found through external means--keep secret!
-                        //to keep it simple, it's 32-signed-bits long
+        long seed;
+        try {
+            seed = keypkg.readKey();
+        } catch (IOException e) {
+            System.err.println("Could not read/get key files.");
+            e.printStackTrace();
+            return;
+        }
 
         int numPeople = names.length;
         int[] recipients = ShuffleAlgs.tanShuffle(numPeople, seed);
