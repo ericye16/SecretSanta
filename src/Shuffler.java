@@ -23,6 +23,7 @@ public class Shuffler {
             e.printStackTrace();
             return;
         }
+        System.err.println("Seed used is: " + seed);
 
         int numPeople = names.length;
         int[] recipients = ShuffleAlgs.tanShuffle(numPeople, seed);
