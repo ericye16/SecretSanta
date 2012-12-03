@@ -6,15 +6,8 @@ import java.io.IOException;
  * Time: 5:28 AM
  */
 public class Shuffler {
-    public static String[] names = {
-            "Alice",
-            "Bob",
-            "Carla",
-            "Daniel",
-            "Elaine",
-            "Frieda"
-    };
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws IOException {
         long seed;
         try {
             seed = keypkg.readKey();
@@ -25,13 +18,12 @@ public class Shuffler {
         }
         System.err.println("Seed used is: " + seed);
 
-        int numPeople = names.length;
+        int numPeople = SendMailSSL.getNumNames();
         int[] recipients = ShuffleAlgs.tanShuffle(numPeople, seed);
 
-        for (int i = 0; i < numPeople; i++) {
-            System.out.println(names[i] + " will give a gift to " + names[recipients[i]]);
-        }
-    }
+        //To be implemented by Andrew:
+        // SendMailSSL.sendEmails(recipients);
 
+    }
 
 }

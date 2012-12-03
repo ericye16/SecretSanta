@@ -119,4 +119,12 @@ public class ShuffleAlgs {
         } while(restart);
         return recievers;
     }
+
+    //To be implemented by Andrew.
+
+    /**
+     * Sends emails to people telling them who to gift for!
+     * @param recipients The randomized list of integers for people to send gifts to.
+     */
+    public static void sendEmails(int[] recipients) {};
 }

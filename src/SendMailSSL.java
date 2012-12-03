@@ -1,4 +1,7 @@
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Properties;
 
 import javax.mail.Message;
@@ -42,4 +45,29 @@ public class SendMailSSL {
 			throw new RuntimeException(e);
 		}
 	}
+
+    public static int getNumNames() throws IOException {
+//        ArrayList<String> names = null;
+        int numNames = 0;
+        BufferedReader i = null;
+        try {
+            i = new BufferedReader(new FileReader("secretsanta.secret"));
+        }
+        finally {
+            i.close();
+        }
+
+        //        String name;
+//        String email;
+        while (i.readLine() != null) {
+//            int comma;
+//            comma = line.indexOf(",");
+//            name = line.substring(0, comma);
+//            email = line.substring(comma + 1);
+//            names.add(name);
+            numNames++;
+        }
+
+        return numNames;
+    }
 }
