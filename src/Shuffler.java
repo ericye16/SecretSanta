@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.HashMap;
 
 /**
  * Eric
@@ -18,11 +19,12 @@ public class Shuffler {
         }
         System.err.println("Seed used is: " + seed);
 
-        int numPeople = nameListParser.getNumNames();
+        HashMap<Integer, String[]> namesAndEmails = nameListParser.getNamesAndEmails();
+        int numPeople = namesAndEmails.size();
         int[] recipients = ShuffleAlgs.tanShuffle(numPeople, seed);
 
         //To be implemented by Andrew:
-        // SendMailSSL.sendEmails(recipients);
+        SendMailSSL.sendEmails(recipients, namesAndEmails);
 
     }
 

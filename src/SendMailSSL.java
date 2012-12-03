@@ -1,6 +1,7 @@
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import java.util.HashMap;
 import java.util.Properties;
  
 public class SendMailSSL {
@@ -37,4 +38,14 @@ public class SendMailSSL {
 		}
 	}
 
+    //to be implemented by Andrew
+
+    /**
+     * Sends email to the <b>givers</b> of the gifts.
+     * @param recipients The ith person in the array gives a gift to the recipients[i]th person
+     * @param namesAndEmails Hashtable mapping the number of the person to their name and email
+     */
+    public static void sendEmails(int[] recipients, HashMap<Integer, String[]> namesAndEmails) {
+
+    }
 }

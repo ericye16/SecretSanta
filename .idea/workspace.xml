@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2dfe46e-41c3-47f8-af9b-70f206a7a455" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/nameListParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SendMailSSL.java" afterPath="$PROJECT_DIR$/src/SendMailSSL.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shuffler.java" afterPath="$PROJECT_DIR$/src/Shuffler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nameListParser.java" afterPath="$PROJECT_DIR$/src/nameListParser.java" />
     </list>
     <ignored path="SecretSanta.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,8 +83,10 @@
       <file leaf-file-name="Shuffler.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Shuffler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="36" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="26" column="57" selection-start="781" selection-end="781" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -101,8 +103,10 @@
       <file leaf-file-name="SendMailSSL.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SendMailSSL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="8" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="45" column="31" selection-start="1382" selection-end="1382" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,9 +114,10 @@
       <file leaf-file-name="nameListParser.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/nameListParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="5" selection-start="544" selection-end="544" vertical-scroll-proportion="0.7118928">
+            <state line="40" column="0" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.82579565">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#492#511#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -135,8 +140,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/keypkg.java" />
         <option value="$PROJECT_DIR$/src/ShuffleAlgs.java" />
-        <option value="$PROJECT_DIR$/src/SendMailSSL.java" />
         <option value="$PROJECT_DIR$/src/Shuffler.java" />
+        <option value="$PROJECT_DIR$/src/SendMailSSL.java" />
         <option value="$PROJECT_DIR$/src/nameListParser.java" />
       </list>
     </option>
@@ -481,7 +486,11 @@
       <created>1354559841136</created>
       <updated>1354559841136</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Put parsing utilities into its own class">
+      <created>1354563562744</created>
+      <updated>1354563562744</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -496,6 +505,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2948718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.67147434" order="3" side_tool="false" content_ui="tabs" />
@@ -505,7 +515,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2948718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39903846" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -547,7 +556,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Began code for reading names" />
+    <option name="LAST_COMMIT_MESSAGE" value="Put parsing utilities into its own class" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -564,6 +573,7 @@
     <MESSAGE value="Actually wrote key generator and reader." />
     <MESSAGE value="Gives debugging view of seed." />
     <MESSAGE value="Began code for reading names" />
+    <MESSAGE value="Put parsing utilities into its own class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -612,23 +622,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SendMailSSL.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="8" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="45" column="31" selection-start="1382" selection-end="1382" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Shuffler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="36" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="26" column="57" selection-start="781" selection-end="781" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nameListParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="5" selection-start="544" selection-end="544" vertical-scroll-proportion="0.7118928">
+        <state line="40" column="0" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.82579565">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#492#511#0" expanded="true" />
           </folding>
         </state>
       </provider>
