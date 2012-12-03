@@ -7,75 +7,6 @@ import java.util.Random;
  * Time: 1:01 PM
  */
 public class ShuffleAlgs {
-    /**
-     * Shuffle algorithm as suggested by Mike Li and Andrew Tan
-     * Shuffles the input list, the output list, and returns the mapping between the two
-     * @param names the number of names
-     * @param seed the seed for the PRNG
-     * @return a list of indices for
-     * which the ith person is the
-     * giver of the person at position i
-     */
-    public static int[] liTanShuffle(int names, long seed) {
-        Random r = new Random(seed);
-
-        //A mapping so the ith person actually is the givers[i]th person
-        int[] givers = new int[names];
-        int[] invGivers = new int[names];
-        int lastNum = 0;
-        HashSet<Integer> used = new HashSet<Integer>();
-        for (int i = 0; i < names; i++) {
-            int next;
-            next = r.nextInt(names);
-            while (used.contains(next)) {
-                next = r.nextInt(names);
-            }
-            if (next == names - 1) {
-                lastNum = i;
-            }
-            invGivers[next] = i;
-            used.add(next);
-            givers[i] = next;
-        }
-        used.clear();
-
-        //recipients of the gifts for the above
-        boolean restartRecievers;
-        int[] recievers;
-        do {
-            restartRecievers = false;
-            recievers = new int[names];
-            for (int i = 0; i < names; i++) {
-                int next;
-                next = r.nextInt(names);
-                while (used.contains(next) || givers[i] == next) {
-                    next = r.nextInt(names);
-                    if (i == names - 1 && !used.contains(lastNum)) {
-                        restartRecievers = true;
-                        break;
-                    }
-                }
-                used.add(next);
-                recievers[i] = next;
-            }
-            used.clear();
-        } while (restartRecievers);
-
-        //finally, let's put them together so we get original -> recipients
-        int[] result = new int[names];
-        for (int i = 0; i < names; i++) {
-            int next;
-            next = r.nextInt(names);
-            while (used.contains(next)) {
-                next = r.nextInt(names);
-            }
-            used.add(next);
-            result[i] = recievers[invGivers[i]];
-        }
-        used.clear();
-
-        return result;
-    }
 
     /**
      * Shuffle algorithm as suggested by Andrew
@@ -98,8 +29,8 @@ public class ShuffleAlgs {
             rSide = new HashSet<Integer>();
             lSide = new HashSet<Integer>();
             restart = false;
-            int lNext = 0;
-            int rNext = 0;
+            int lNext;
+            int rNext;
             for (int i = 0; i < names; i++) {
                 do {
                     lNext = r.nextInt(names);
@@ -119,12 +50,4 @@ public class ShuffleAlgs {
         } while(restart);
         return recievers;
     }
-
-    //To be implemented by Andrew.
-
-    /**
-     * Sends emails to people telling them who to gift for!
-     * @param recipients The randomized list of integers for people to send gifts to.
-     */
-    public static void sendEmails(int[] recipients) {};
 }
