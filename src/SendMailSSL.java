@@ -1,16 +1,7 @@
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.Properties;
-
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
+import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import java.util.Properties;
  
 public class SendMailSSL {
 	public static void main(String[] args) {
@@ -46,28 +37,4 @@ public class SendMailSSL {
 		}
 	}
 
-    public static int getNumNames() throws IOException {
-//        ArrayList<String> names = null;
-        int numNames = 0;
-        BufferedReader i = null;
-        try {
-            i = new BufferedReader(new FileReader("secretsanta.secret"));
-        }
-        finally {
-            i.close();
-        }
-
-        //        String name;
-//        String email;
-        while (i.readLine() != null) {
-//            int comma;
-//            comma = line.indexOf(",");
-//            name = line.substring(0, comma);
-//            email = line.substring(comma + 1);
-//            names.add(name);
-            numNames++;
-        }
-
-        return numNames;
-    }
 }

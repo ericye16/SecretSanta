@@ -18,7 +18,7 @@ public class Shuffler {
         }
         System.err.println("Seed used is: " + seed);
 
-        int numPeople = SendMailSSL.getNumNames();
+        int numPeople = nameListParser.getNumNames();
         int[] recipients = ShuffleAlgs.tanShuffle(numPeople, seed);
 
         //To be implemented by Andrew:
