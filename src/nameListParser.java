@@ -23,7 +23,7 @@ public class nameListParser {
         int commaPlace;
         BufferedReader i = null;
         try {
-            i = new BufferedReader(new FileReader("secretsanta.secret"));
+            i = new BufferedReader(new FileReader("secretsanta.csv"));
 
             while ((line = i.readLine()) != null) {
                 commaPlace = line.indexOf(",");
