@@ -31,7 +31,7 @@ public class SendMailSSL {
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress("secretsantatops2014@gmail.com"));
             message.setRecipients(Message.RecipientType.TO,
-                    InternetAddress.parse("computereric@live.ca"));
+                    InternetAddress.parse(message_to));
             message.setSubject("Secret Santa");
             message.setText(message_body);
 
@@ -59,7 +59,7 @@ public class SendMailSSL {
             giver++;
             System.err.println("TO: "+message_to);
             System.err.println("MESSAGE: "+message_body);
-            sendEmail(message_to, message_body);
+            //sendEmail(message_to, message_body);
         }
     }
 
