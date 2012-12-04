@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2dfe46e-41c3-47f8-af9b-70f206a7a455" name="Default" comment="Made it work!">
+    <list default="true" id="e2dfe46e-41c3-47f8-af9b-70f206a7a455" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SendMailSSL.java" afterPath="$PROJECT_DIR$/src/SendMailSSL.java" />
     </list>
@@ -81,7 +81,7 @@
       <file leaf-file-name="Shuffler.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Shuffler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="25" selection-start="936" selection-end="936" vertical-scroll-proportion="0.0">
+            <state line="33" column="40" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -90,7 +90,7 @@
       <file leaf-file-name="ShuffleAlgs.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ShuffleAlgs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="26" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0">
+            <state line="21" column="73" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -99,7 +99,7 @@
       <file leaf-file-name="SendMailSSL.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SendMailSSL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="22" selection-start="1632" selection-end="1632" vertical-scroll-proportion="0.2823219">
+            <state line="62" column="19" selection-start="2508" selection-end="2508" vertical-scroll-proportion="2.7810025">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -495,7 +495,11 @@
       <created>1354593780496</created>
       <updated>1354593780496</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Made it work!">
+      <created>1354596373204</created>
+      <updated>1354596373204</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -561,7 +565,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed message, added option to view or email" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made it work!" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -582,6 +586,7 @@
     <MESSAGE value="Only reads csv once, now returns a hashtable of names and emails." />
     <MESSAGE value="Deleted unused methods." />
     <MESSAGE value="Changed message, added option to view or email" />
+    <MESSAGE value="Made it work!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -621,11 +626,6 @@
         <state line="42" column="0" selection-start="1101" selection-end="1101" vertical-scroll-proportion="1.2576531" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ShuffleAlgs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="26" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/nameListParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="69" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0" />
@@ -633,14 +633,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Shuffler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="25" selection-start="936" selection-end="936" vertical-scroll-proportion="0.0">
+        <state line="33" column="40" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ShuffleAlgs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="73" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SendMailSSL.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="22" selection-start="1632" selection-end="1632" vertical-scroll-proportion="0.2823219">
+        <state line="62" column="19" selection-start="2508" selection-end="2508" vertical-scroll-proportion="2.7810025">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

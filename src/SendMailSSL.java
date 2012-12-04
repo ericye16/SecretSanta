@@ -54,8 +54,7 @@ public class SendMailSSL {
         Object[] names = namesAndEmails.keySet().toArray();
         for(int i:recipients){
             //System.out.println(namesAndEmails.get(i));
-            //message_to=namesAndEmails.get(giver)[1];
-            message_to="computereric@live.ca";
+            message_to=namesAndEmails.get(giver)[1];
             message_body=String.format(email_template, namesAndEmails.get(giver)[0], namesAndEmails.get(i)[0]);
             giver++;
             System.err.println("TO: "+message_to);
