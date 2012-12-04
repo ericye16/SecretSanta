@@ -6,6 +6,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.HashMap;
 import java.util.Properties;
+import javax.mail.Transport;
 
  
 public class SendMailSSL {
@@ -22,22 +23,22 @@ public class SendMailSSL {
         Session session = Session.getDefaultInstance(props,
                 new javax.mail.Authenticator() {
                     protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication("username","password");
+                        return new PasswordAuthentication("secretsantatops2014@gmail.com","");
                     }
                 });
 
         try {
 
             Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("from@no-spam.com"));
+            message.setFrom(new InternetAddress("secretsantatops2014@gmail.com"));
             message.setRecipients(Message.RecipientType.TO,
-                    InternetAddress.parse(message_to));
+                    InternetAddress.parse("computereric@live.ca"));
             message.setSubject("Secret Santa");
             message.setText(message_body);
 
-            //Transport.send(message);
+            Transport.send(message);
 
-            System.out.println("Sent Message to: "+message_to);
+            System.out.println("Done");
 
         } catch (MessagingException e) {
             throw new RuntimeException(e);
@@ -51,7 +52,8 @@ public class SendMailSSL {
         Object[] names = namesAndEmails.keySet().toArray();
         for(int i:recipients){
             //System.out.println(namesAndEmails.get(i));
-            message_to=namesAndEmails.get(giver)[1];
+            //message_to=namesAndEmails.get(giver)[1];
+            message_to="computereric@live.ca";
             message_body=String.format(email_template, namesAndEmails.get(giver)[0], namesAndEmails.get(i)[0]);
             giver++;
             System.err.println("TO: "+message_to);
