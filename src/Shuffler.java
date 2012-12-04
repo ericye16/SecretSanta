@@ -1,5 +1,3 @@
-import sun.net.idn.StringPrep;
-
 import java.io.IOException;
 import java.util.HashMap;
 
@@ -11,7 +9,6 @@ import java.util.HashMap;
 public class Shuffler {
 
     public static void main(String[] args)throws IOException {
-
         long seed;
         try {
             seed = keypkg.readKey();
@@ -25,8 +22,24 @@ public class Shuffler {
         HashMap<Integer, String[]> namesAndEmails = nameListParser.getNamesAndEmails();
         int numPeople = namesAndEmails.size();
         int[] recipients = ShuffleAlgs.tanShuffle(numPeople, seed);
+        System.out.println("(e)mail or simply (v)iew?");
+        switch (System.in.read()) {
+            case 'e':
+                SendMailSSL.sendEmails(recipients, namesAndEmails);
+                break;
+            case 'v':
+                showGiversAndRecipients(recipients, namesAndEmails);
+                break;
+            default:
+                System.err.println("Invalid choice; exiting.");
+        }
+    }
 
-        SendMailSSL.sendEmails(recipients, namesAndEmails);
+    private static void showGiversAndRecipients(int[] recipients, HashMap<Integer, String[]> namesAndEmails) {
+        for (int i = 0; i < recipients.length; i++) {
+            System.out.format("%s is giving a gift to %s.\n",
+                    namesAndEmails.get(i)[0], namesAndEmails.get(recipients[i])[0]);
+        }
     }
 
 }

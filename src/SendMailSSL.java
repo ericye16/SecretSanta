@@ -1,16 +1,15 @@
-import java.util.Properties;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
-import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-import javax.sound.midi.SysexMessage;
 import java.util.HashMap;
+import java.util.Properties;
 
  
 public class SendMailSSL {
+    public static String email_template = "Hello %s! Thanks for participating in secret santa.\nThe lucky devil to recieve your gift is: %s.\n\nHappy shopping!";
 	protected static void sendEmail(String message_to,String message_body){
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");
@@ -48,14 +47,15 @@ public class SendMailSSL {
         String message_body = null;
         String message_to = null;
         int giver=0;
+
         Object[] names = namesAndEmails.keySet().toArray();
         for(int i:recipients){
             //System.out.println(namesAndEmails.get(i));
             message_to=namesAndEmails.get(giver)[1];
-            message_body="Hello "+namesAndEmails.get(giver)[0]+", you are giving a gift to "+namesAndEmails.get(i)[0];
+            message_body=String.format(email_template, namesAndEmails.get(giver)[0], namesAndEmails.get(i)[0]);
             giver++;
-            System.out.println("TO: "+message_to);
-            System.out.println("MESSAGE: "+message_body);
+            System.err.println("TO: "+message_to);
+            System.err.println("MESSAGE: "+message_body);
         }
     }
 
