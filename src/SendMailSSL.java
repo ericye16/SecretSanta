@@ -59,7 +59,7 @@ public class SendMailSSL {
             giver++;
             System.err.println("TO: "+message_to);
             System.err.println("MESSAGE: "+message_body);
-            //sendEmail(message_to, message_body);
+            sendEmail(message_to, message_body);
         }
     }
 
