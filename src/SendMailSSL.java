@@ -1,14 +1,13 @@
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
+import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Properties;
-import javax.mail.Transport;
 
- 
+
 public class SendMailSSL {
     public static String email_template = "Hello %s! Thanks for participating in secret santa.\nThe lucky devil to recieve your gift is: %s.\n\nHappy shopping!";
 	protected static void sendEmail(String message_to,String message_body){
@@ -23,7 +22,7 @@ public class SendMailSSL {
         Session session = Session.getDefaultInstance(props,
                 new javax.mail.Authenticator() {
                     protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication("secretsantatops2014@gmail.com","");
+                        return new PasswordAuthentication("secretsantatops2014@gmail.com", pw);
                     }
                 });
 
@@ -38,16 +37,19 @@ public class SendMailSSL {
 
             Transport.send(message);
 
-            System.out.println("Done");
+            System.err.println("Done");
 
         } catch (MessagingException e) {
             throw new RuntimeException(e);
         }
     }
+    private static String pw;
     public static void sendEmails(int[] recipients, HashMap<Integer, String[]> namesAndEmails) {
         String message_body = null;
         String message_to = null;
         int giver=0;
+
+        pw = getPasswordFromUser();
 
         Object[] names = namesAndEmails.keySet().toArray();
         for(int i:recipients){
@@ -58,6 +60,18 @@ public class SendMailSSL {
             giver++;
             System.err.println("TO: "+message_to);
             System.err.println("MESSAGE: "+message_body);
+            sendEmail(message_to, message_body);
+        }
+    }
+
+    private static String getPasswordFromUser() {
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            return in.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            System.err.println("Failed to read password.");
+            return null;
         }
     }
 
