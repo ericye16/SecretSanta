@@ -1,5 +1,9 @@
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.HashMap;
+import java.util.Random;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Eric
@@ -18,21 +22,44 @@ public class Shuffler {
             return;
         }
         System.err.println("Seed used is: " + seed);
-
         HashMap<Integer, String[]> namesAndEmails = nameListParser.getNamesAndEmails();
         int numPeople = namesAndEmails.size();
-        int[] recipients = ShuffleAlgs.tanShuffle(numPeople, seed);
-        System.out.println("(e)mail or simply (v)iew?");
-        switch (System.in.read()) {
-            case 'e':
-                SendMailSSL.sendEmails(recipients, namesAndEmails);
-                break;
-            case 'v':
-                showGiversAndRecipients(recipients, namesAndEmails);
-                break;
-            default:
-                System.err.println("Invalid choice; exiting.");
-        }
+        ShuffleAlgs.random = new Random(seed);
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        Boolean exit = null;
+
+        int[] recipients = ShuffleAlgs.tanShuffle(numPeople);
+        do {
+            System.out.println("(c)hange and email, (q)uit, (e)mail or simply (v)iew? ");
+            switch (in.readLine().charAt(0)) {
+                case 'e':
+                    SendMailSSL.sendEmails(recipients, namesAndEmails);
+                    exit = true;
+                    break;
+                case 'v':
+                    showGiversAndRecipients(recipients, namesAndEmails);
+                    exit = false;
+                    break;
+                case 'q':
+                    exit = true;
+                    break;
+                case 'c':
+                    AtomicInteger oldChang = new AtomicInteger();
+                    AtomicInteger newRec = new AtomicInteger();
+                    String[] newNameAndEmail = askForNewNameAndEmail();
+                    recipients = ShuffleAlgs.addPersonAndEmail(namesAndEmails,
+                            newNameAndEmail[0], newNameAndEmail[1], recipients, oldChang, newRec);
+                    SendMailSSL.sendChangeEmail(namesAndEmails, oldChang, newRec);
+                    numPeople = recipients.length;
+                    exit = false;
+                    break;
+                default:
+                    System.err.println("Invalid choice.");
+                    exit = false;
+                    break;
+
+            }
+        } while(!exit);
     }
 
     private static void showGiversAndRecipients(int[] recipients, HashMap<Integer, String[]> namesAndEmails) {
@@ -40,6 +67,21 @@ public class Shuffler {
             System.out.format("%s is giving a gift to %s.\n",
                     namesAndEmails.get(i)[0], namesAndEmails.get(recipients[i])[0]);
         }
+    }
+
+    private static String[] askForNewNameAndEmail() {
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        String[] toBeReturned = new String[2];
+        try {
+            System.out.println("Enter their name");
+            toBeReturned[0] = in.readLine();
+            System.out.println("Enter their email address");
+            toBeReturned[1] = in.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+        return toBeReturned;
+
     }
 
 }

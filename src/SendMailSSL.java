@@ -6,10 +6,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Properties;
+import java.util.concurrent.atomic.AtomicInteger;
 
 
 public class SendMailSSL {
-    public static String email_template = "Hello %s! Thanks for participating in secret santa.\nThe lucky devil to recieve your gift is: %s.\n\nHappy shopping!";
+    private static String change_email_template = "Hi %s! \nSorry for the inconvenice, but due to last-minute changes, your recipient has been changed to %s.\n\nHappy shopping!";
+
+    private static String email_template = "Hello %s! Thanks for participating in secret santa.\nThe lucky devil to receive your gift is: %s.\n\nHappy shopping!";
 	protected static void sendEmail(String message_to,String message_body){
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");
@@ -64,6 +67,7 @@ public class SendMailSSL {
     }
 
     private static String getPasswordFromUser() {
+        System.out.print("Enter your password: ");
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         try {
             return in.readLine();
@@ -72,6 +76,31 @@ public class SendMailSSL {
             System.err.println("Failed to read password.");
             return null;
         }
+    }
+
+    public static void sendChangeEmail(HashMap<Integer, String[]> namesAndEmails,
+                                       AtomicInteger oldChang, AtomicInteger newRec) {
+        pw = getPasswordFromUser();
+        String message_to = null;
+        String message_body = null;
+
+         //send to the newest person
+        String[] giver;
+        giver = namesAndEmails.get(namesAndEmails.size() - 1);
+        message_to=giver[1];
+        message_body=String.format(email_template, giver[0], namesAndEmails.get(newRec.get())[0]);
+        System.err.println("TO: "+message_to);
+        System.err.println("MESSAGE: "+message_body);
+        sendEmail(message_to, message_body);
+
+        //send to the old person
+        giver = namesAndEmails.get(oldChang.get());
+        message_to=giver[1];
+        message_body=String.format(change_email_template, giver[0], namesAndEmails.get(namesAndEmails.size() - 1)[0]);
+        System.err.println("TO: "+message_to);
+        System.err.println("MESSAGE: "+message_body);
+        sendEmail(message_to, message_body);
+
     }
 
 }
