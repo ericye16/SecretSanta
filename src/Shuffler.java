@@ -1,3 +1,5 @@
+import sun.net.idn.StringPrep;
+
 import java.io.IOException;
 import java.util.HashMap;
 
@@ -8,7 +10,8 @@ import java.util.HashMap;
  */
 public class Shuffler {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)throws IOException {
+
         long seed;
         try {
             seed = keypkg.readKey();
@@ -23,9 +26,7 @@ public class Shuffler {
         int numPeople = namesAndEmails.size();
         int[] recipients = ShuffleAlgs.tanShuffle(numPeople, seed);
 
-        //To be implemented by Andrew:
         SendMailSSL.sendEmails(recipients, namesAndEmails);
-
     }
 
 }
