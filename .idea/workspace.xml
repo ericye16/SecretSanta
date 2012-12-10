@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2dfe46e-41c3-47f8-af9b-70f206a7a455" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Graphing.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SendMailSSL.java" afterPath="$PROJECT_DIR$/src/SendMailSSL.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ShuffleAlgs.java" afterPath="$PROJECT_DIR$/src/ShuffleAlgs.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shuffler.java" afterPath="$PROJECT_DIR$/src/Shuffler.java" />
     </list>
     <ignored path="SecretSanta.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,8 +68,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="field_breakpoints_viewId" value="TABLE" />
+      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -80,44 +78,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Shuffler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Shuffler.java">
+      <file leaf-file-name="Graphing.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Graphing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="50" selection-start="2068" selection-end="2068" vertical-scroll-proportion="0.0">
+            <state line="22" column="0" selection-start="432" selection-end="432" vertical-scroll-proportion="0.6264657">
               <folding>
-                <element signature="method#showGiversAndRecipients#0;class#Shuffler#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShuffleAlgs.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ShuffleAlgs.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="55" selection-start="2656" selection-end="2656" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SendMailSSL.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/SendMailSSL.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="78" selection-start="3370" selection-end="3370" vertical-scroll-proportion="0.6279683">
-              <folding>
-                <element signature="method#sendEmail#0;class#SendMailSSL#0" expanded="false" />
-                <element signature="method#sendEmails#0;class#SendMailSSL#0" expanded="false" />
-                <element signature="method#getPasswordFromUser#0;class#SendMailSSL#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nameListParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nameListParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="69" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -132,6 +99,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GradleLocalSettings">
+    <option name="expandStates">
+      <map>
+        <entry key="SecretSanta" value="true" />
+      </map>
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
@@ -139,9 +113,11 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/keypkg.java" />
         <option value="$PROJECT_DIR$/src/nameListParser.java" />
-        <option value="$PROJECT_DIR$/src/ShuffleAlgs.java" />
         <option value="$PROJECT_DIR$/src/Shuffler.java" />
         <option value="$PROJECT_DIR$/src/SendMailSSL.java" />
+        <option value="$PROJECT_DIR$/src/ShuffleAlgs.java" />
+        <option value="$PROJECT_DIR$/src/MultiFrameApplet.java" />
+        <option value="$PROJECT_DIR$/src/Graphing.java" />
       </list>
     </option>
   </component>
@@ -212,6 +188,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecretSanta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecretSanta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Graphing.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecretSanta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope">
@@ -224,36 +228,22 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SecretSanta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SecretSanta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="137" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="137" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="137" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="138" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="138" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="139" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="812" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="812" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="812" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="138" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="137" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -270,10 +260,10 @@
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="Application.Shuffler">
+  <component name="RunManager" selected="Application.Graphing">
     <configuration default="false" name="Shuffler" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Shuffler" />
       <option name="VM_PARAMETERS" />
@@ -298,6 +288,38 @@
     </configuration>
     <configuration default="false" name="keypkg" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="keypkg" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="SecretSanta" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MultiFrameApplet" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="MultiFrameApplet" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="SecretSanta" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Graphing" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Graphing" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -337,25 +359,6 @@
         <option name="SBT.BeforeRunTask" enabled="false" action="test:products" runInCurrentModule="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-        <option name="SBT.BeforeRunTask" enabled="false" action="test:products" runInCurrentModule="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -381,6 +384,25 @@
       <envs />
       <properties />
       <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="SBT.BeforeRunTask" enabled="false" action="test:products" runInCurrentModule="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -435,9 +457,11 @@
         <option name="SBT.BeforeRunTask" enabled="false" action="test:products" runInCurrentModule="true" />
       </method>
     </configuration>
-    <list size="2">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.Shuffler" />
       <item index="1" class="java.lang.String" itemvalue="Application.keypkg" />
+      <item index="2" class="java.lang.String" itemvalue="Application.MultiFrameApplet" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Graphing" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -445,6 +469,11 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SliceManager">
+    <option name="analysisUIOptions">
+      <AnalysisUIOptions />
+    </option>
+  </component>
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
@@ -517,31 +546,35 @@
       <created>1354597998184</created>
       <updated>1354597998184</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added adding-people functionality.">
+      <created>1354641542541</created>
+      <updated>1354641542541</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26923078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.67147434" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39903846" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2948718" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.67147434" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24940239" sideWeight="0.67147434" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32852563" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24940239" sideWeight="0.67147434" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2948718" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39903846" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -583,7 +616,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Uncommented actual emailing line." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added adding-people functionality." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -608,6 +641,7 @@
     <MESSAGE value="Finalized;ready to email." />
     <MESSAGE value="Fixed my email being hardcoded." />
     <MESSAGE value="Uncommented actual emailing line." />
+    <MESSAGE value="Added adding-people functionality." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -642,41 +676,46 @@
         <state line="28" column="48" selection-start="1217" selection-end="1217" vertical-scroll-proportion="0.7859589" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nameListParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="69" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/keypkg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.9430486">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ShuffleAlgs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="55" selection-start="2656" selection-end="2656" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shuffler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="50" selection-start="2068" selection-end="2068" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="method#showGiversAndRecipients#0;class#Shuffler#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="42" column="0" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.9430486" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SendMailSSL.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="78" selection-start="3370" selection-end="3370" vertical-scroll-proportion="0.6279683">
+        <state line="25" column="18" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.044854883" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nameListParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="104" selection-start="1232" selection-end="1232" vertical-scroll-proportion="1.2627552" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ShuffleAlgs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="46" selection-start="2045" selection-end="2045" vertical-scroll-proportion="2.732143" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shuffler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="31" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/awt/Canvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="16" selection-start="3121" selection-end="3121" vertical-scroll-proportion="0.33243242" />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/awt/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2606" column="21" selection-start="89688" selection-end="89688" vertical-scroll-proportion="-0.6094987" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="432" selection-end="432" vertical-scroll-proportion="0.6264657">
           <folding>
-            <element signature="method#sendEmail#0;class#SendMailSSL#0" expanded="false" />
-            <element signature="method#sendEmails#0;class#SendMailSSL#0" expanded="false" />
-            <element signature="method#getPasswordFromUser#0;class#SendMailSSL#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
