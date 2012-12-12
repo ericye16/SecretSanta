@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -12,7 +13,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class Shuffler {
 
-    public static void main(String[] args)throws IOException {
+    public static void main(String[] args) throws IOException {
         long seed;
         try {
             seed = keypkg.readKey();
@@ -26,11 +27,12 @@ public class Shuffler {
         int numPeople = namesAndEmails.size();
         ShuffleAlgs.random = new Random(seed);
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-        Boolean exit = null;
+        Boolean exit = false;
+        HashMap<Integer, Integer> numSubTours;
 
         int[] recipients = ShuffleAlgs.tanShuffle(numPeople);
         do {
-            System.out.println("(c)hange and email, (q)uit, (e)mail or simply (v)iew? ");
+            System.out.println("(c)hange, (q)uit, check (s)ubgraphs, (e)mail or simply (v)iew? ");
             switch (in.readLine().charAt(0)) {
                 case 'e':
                     SendMailSSL.sendEmails(recipients, namesAndEmails);
@@ -49,8 +51,18 @@ public class Shuffler {
                     String[] newNameAndEmail = askForNewNameAndEmail();
                     recipients = ShuffleAlgs.addPersonAndEmail(namesAndEmails,
                             newNameAndEmail[0], newNameAndEmail[1], recipients, oldChang, newRec);
-                    SendMailSSL.sendChangeEmail(namesAndEmails, oldChang, newRec);
-                    numPeople = recipients.length;
+                    System.out.println("(e)mail or (n)ot? ");
+                    if (in.readLine().charAt(0) == 'e') {
+                        SendMailSSL.sendChangeEmail(namesAndEmails, oldChang, newRec);
+                        numPeople = recipients.length;
+                    }
+                    exit = false;
+                    break;
+                case 's':
+                    numSubTours = Graphing.getSubGraphs(recipients);
+                    for (Map.Entry<Integer, Integer> entry : numSubTours.entrySet()) {
+                         System.out.println(entry.getKey() + ": " + entry.getValue());
+                    }
                     exit = false;
                     break;
                 default:
@@ -59,7 +71,7 @@ public class Shuffler {
                     break;
 
             }
-        } while(!exit);
+        } while (!exit);
     }
 
     private static void showGiversAndRecipients(int[] recipients, HashMap<Integer, String[]> namesAndEmails) {
