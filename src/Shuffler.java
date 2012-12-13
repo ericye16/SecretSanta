@@ -90,7 +90,7 @@ public class Shuffler {
             System.out.println("Enter their email address");
             toBeReturned[1] = in.readLine();
         } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         }
         return toBeReturned;
 

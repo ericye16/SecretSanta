@@ -10,7 +10,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 
 public class SendMailSSL {
-    private static String change_email_template = "Hi %s! \nSorry for the inconvenice, but due to last-minute changes, your recipient has been changed to %s.\n\nHappy shopping!";
 
     private static String email_template = "Hello %s! Thanks for participating in secret santa.\nThe lucky devil to receive your gift is: %s.\n\nHappy shopping!";
 	protected static void sendEmail(String message_to,String message_body){
@@ -48,13 +47,12 @@ public class SendMailSSL {
     }
     private static String pw;
     public static void sendEmails(int[] recipients, HashMap<Integer, String[]> namesAndEmails) {
-        String message_body = null;
-        String message_to = null;
+        String message_body;
+        String message_to;
         int giver=0;
 
         pw = getPasswordFromUser();
 
-        Object[] names = namesAndEmails.keySet().toArray();
         for(int i:recipients){
             //System.out.println(namesAndEmails.get(i));
             message_to=namesAndEmails.get(giver)[1];
@@ -81,8 +79,8 @@ public class SendMailSSL {
     public static void sendChangeEmail(HashMap<Integer, String[]> namesAndEmails,
                                        AtomicInteger oldChang, AtomicInteger newRec) {
         pw = getPasswordFromUser();
-        String message_to = null;
-        String message_body = null;
+        String message_to;
+        String message_body;
 
          //send to the newest person
         String[] giver;
@@ -96,6 +94,7 @@ public class SendMailSSL {
         //send to the old person
         giver = namesAndEmails.get(oldChang.get());
         message_to=giver[1];
+        String change_email_template = "Hi %s! \nSorry for the inconvenice, but due to last-minute changes, your recipient has been changed to %s.\n\nHappy shopping!";
         message_body=String.format(change_email_template, giver[0], namesAndEmails.get(namesAndEmails.size() - 1)[0]);
         System.err.println("TO: "+message_to);
         System.err.println("MESSAGE: "+message_body);
