@@ -1,6 +1,7 @@
 *.class
 *.secret
-
+workspace.xml
+.idea/dictionaries
 # Package Files #
 *.jar
 *.war
