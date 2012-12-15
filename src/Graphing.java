@@ -1,7 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Random;
 
 /**
  * User: Eric
@@ -13,8 +15,8 @@ public class Graphing {
         JFrame f = new JFrame();
         MyCanvas c = new MyCanvas();
         f.getContentPane().add(c);
-        f.setSize(1200, 700);
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setSize(800, 700);
+        f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         f.setVisible(true);
     }
 
@@ -24,7 +26,7 @@ public class Graphing {
 
         //initialize
         int i = 0;
-        int count = 1;
+        int count;
         //alreadyVisited.add(0);
 
         do {
@@ -53,7 +55,7 @@ public class Graphing {
 class MyCanvas extends Canvas {
 
     public Dimension getPreferredSize() {
-        return new Dimension(1200, 700);
+        return new Dimension(700, 700);
     }
 
     /**
@@ -80,7 +82,7 @@ class MyCanvas extends Canvas {
         */
 
         //elementary mathematics for the win!
-        final int lengthOfArrowHead = 10;
+        final int lengthOfArrowHead = 20;
         final double angleOfArrowHead = Math.PI / 9.0; //20 degrees -- remember we're in Radians.
         int arrowHeadX1;
         int arrowHeadX2;
@@ -125,7 +127,7 @@ class MyCanvas extends Canvas {
             arrowHeadX2 = x2 - (int) (lengthOfArrowHead * Math.sin(angleOfArrowHead + slopeAngleFromY));
             arrowHeadY2 = y2 - (int) (lengthOfArrowHead * Math.cos(angleOfArrowHead + slopeAngleFromY));
         }
-        g.setColor(Color.green);
+        g.setColor(Color.red);
         g.drawLine(x2, y2, arrowHeadX1, arrowHeadY1); //right
         g.drawLine(x2, y2, arrowHeadX2, arrowHeadY2);  //left
         g.setColor(Color.black);
@@ -135,6 +137,58 @@ class MyCanvas extends Canvas {
     public void paint(Graphics g) {
 
         //draw our stuff here.
-        drawArrow(0, 0, 500, 500, g);
+        //drawArrow(0, 0, 500, 500, g);
+        int[] orig;
+        int[] nuu;
+        for (int i = 0; i < numPeople; i++) {
+            orig = getCoords(shuffledNames2[i]);
+            nuu = getCoords(shuffledNames2[shuffledNames[i]]);
+            drawArrow(orig[0], orig[1], nuu[0], nuu[1], g);
+        }
+    }
+
+    private int numRows;
+
+    private int numPeople;
+
+    private int[] shuffledNames;
+
+    private int[] shuffledNames2;
+
+    private int spacing;
+
+    final private int topBuffer = 50;
+
+    final private int leftBuffer = 50;
+
+    public MyCanvas() {
+        long seed;
+        try {
+            seed = keypkg.readKey();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        }
+        HashMap<Integer, String[]> namesAndEmails = null;
+        try {
+            namesAndEmails = nameListParser.getNamesAndEmails();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        }
+        numPeople = namesAndEmails.size();
+        numRows = (int) Math.ceil(Math.sqrt(numPeople));
+        spacing = 600 / numRows;
+        ShuffleAlgs.random = new Random(seed);
+        shuffledNames = ShuffleAlgs.tanShuffle(numPeople);
+
+        //run it again to anonymize the people. i.e. so person no. 1 isn't actually the first person on the list.
+        ShuffleAlgs.random = new Random();
+        shuffledNames2 = ShuffleAlgs.tanShuffle(numPeople);
+        //paint();
+    }
+
+    private int[] getCoords(int person) {
+        return new int[]{(person / numRows) * spacing + leftBuffer, (person % numRows) * spacing + topBuffer};
     }
 }
