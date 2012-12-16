@@ -15,7 +15,7 @@ public class Graphing {
         JFrame f = new JFrame();
         MyCanvas c = new MyCanvas();
         f.getContentPane().add(c);
-        f.setSize(800, 700);
+        f.setSize(700, 700);
         f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         f.setVisible(true);
     }
@@ -137,12 +137,13 @@ class MyCanvas extends Canvas {
     public void paint(Graphics g) {
 
         //draw our stuff here.
-        //drawArrow(0, 0, 500, 500, g);
         int[] orig;
         int[] nuu;
         for (int i = 0; i < numPeople; i++) {
-            orig = getCoords(shuffledNames2[i]);
-            nuu = getCoords(shuffledNames2[shuffledNames[i]]);
+
+            //change the next two lines to use getCoords() if you want it in a squarish format.
+            orig = getCoordsCircle(shuffledNames2[i]);
+            nuu = getCoordsCircle(shuffledNames2[shuffledNames[i]]);
             drawArrow(orig[0], orig[1], nuu[0], nuu[1], g);
         }
     }
@@ -156,6 +157,13 @@ class MyCanvas extends Canvas {
     private int[] shuffledNames2;
 
     private int spacing;
+
+    //Radius for when we want the people arranged in a circle
+    final private int radius = 300;
+
+    final private int xCentre = 325;
+
+    final private int yCentre = 325;
 
     final private int topBuffer = 50;
 
@@ -189,6 +197,15 @@ class MyCanvas extends Canvas {
     }
 
     private int[] getCoords(int person) {
-        return new int[]{(person / numRows) * spacing + leftBuffer, (person % numRows) * spacing + topBuffer};
+        return new int[]{(person / numRows) * spacing + leftBuffer, //x
+                (person % numRows) * spacing + topBuffer}; //y
+    }
+
+    private int[] getCoordsCircle(int person) {
+        double alpha = person * (double) numPeople / (2 * Math.PI); //the angle
+        int x = (int) (radius * Math.sin(alpha));
+        int y = (int) (radius * Math.cos(alpha));
+
+        return new int[] {x + xCentre, y + yCentre};
     }
 }
