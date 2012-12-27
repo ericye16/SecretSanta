@@ -90,43 +90,19 @@ class MyCanvas extends Canvas {
         int arrowHeadY2;
 
         double slope = (double) (y2 - y1) / (double) (x2 - x1);
-        if (slope == Float.NEGATIVE_INFINITY) {
-            //the line is going straight down.
-            /*
-             Therefore, the change in y is:
-             +lengthOfArrowHead * cos(angleOfArrowHead)
-             and the change in x is:
-             +/- lengthOfArrowHead * sin(angleOfArrowHead)
-             */
 
-            arrowHeadX1 = x2 + (int) (lengthOfArrowHead * Math.sin(angleOfArrowHead));
-            arrowHeadX2 = x2 - (int) (lengthOfArrowHead * Math.sin(angleOfArrowHead));
-            arrowHeadY1 = y2 + (int) (lengthOfArrowHead * Math.cos(angleOfArrowHead));
-            arrowHeadY2 = y2 + (int) (lengthOfArrowHead * Math.cos(angleOfArrowHead));
-        } else if (slope == Float.POSITIVE_INFINITY) {
-            //the line is going straight up.
-            /*
-            Same as above, but the change is y is negative.
-             */
+        double slopeAngleFromX = Math.atan2((y2 - y1), (x2 - x1));
+        double slopeAngleFromY = Math.PI / 2 - slopeAngleFromX;
 
-            arrowHeadX1 = x2 + (int) (lengthOfArrowHead * Math.sin(angleOfArrowHead));
-            arrowHeadX2 = x2 - (int) (lengthOfArrowHead * Math.sin(angleOfArrowHead));
-            arrowHeadY1 = y2 - (int) (lengthOfArrowHead * Math.cos(angleOfArrowHead));
-            arrowHeadY2 = y2 - (int) (lengthOfArrowHead * Math.cos(angleOfArrowHead));
-        } else {
-            //this is a little more difficult.
-            double slopeAngleFromX = Math.atan2((y2 - y1), (x2 - x1));
-            double slopeAngleFromY = Math.PI / 2 - slopeAngleFromX;
+        /*
+        I'll document the below when I have time. But this took a while to figure out.
+         */
 
-            /*
-            I'll document the below when I have time. But this took a while to figure out.
-             */
+        arrowHeadX1 = x2 - (int) (lengthOfArrowHead * Math.cos(angleOfArrowHead + slopeAngleFromX));
+        arrowHeadY1 = y2 - (int) (lengthOfArrowHead * Math.sin(angleOfArrowHead + slopeAngleFromX));
+        arrowHeadX2 = x2 - (int) (lengthOfArrowHead * Math.sin(angleOfArrowHead + slopeAngleFromY));
+        arrowHeadY2 = y2 - (int) (lengthOfArrowHead * Math.cos(angleOfArrowHead + slopeAngleFromY));
 
-            arrowHeadX1 = x2 - (int) (lengthOfArrowHead * Math.cos(angleOfArrowHead + slopeAngleFromX));
-            arrowHeadY1 = y2 - (int) (lengthOfArrowHead * Math.sin(angleOfArrowHead + slopeAngleFromX));
-            arrowHeadX2 = x2 - (int) (lengthOfArrowHead * Math.sin(angleOfArrowHead + slopeAngleFromY));
-            arrowHeadY2 = y2 - (int) (lengthOfArrowHead * Math.cos(angleOfArrowHead + slopeAngleFromY));
-        }
         g.setColor(Color.red);
         g.drawLine(x2, y2, arrowHeadX1, arrowHeadY1); //right
         g.drawLine(x2, y2, arrowHeadX2, arrowHeadY2);  //left
@@ -142,8 +118,8 @@ class MyCanvas extends Canvas {
         for (int i = 0; i < numPeople; i++) {
 
             //change the next two lines to use getCoords() if you want it in a squarish format.
-            orig = getCoordsCircle(shuffledNames2[i]);
-            nuu = getCoordsCircle(shuffledNames2[shuffledNames[i]]);
+            orig = getCoords(shuffledNames2[i]);
+            nuu = getCoords(shuffledNames2[shuffledNames[i]]);
             drawArrow(orig[0], orig[1], nuu[0], nuu[1], g);
         }
     }
